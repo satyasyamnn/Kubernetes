@@ -5,6 +5,7 @@
 Basic execution unit of a kubernets application. This is what is created and deployed. Containers are hosted in pod. Applications can be deployed to multiple containers in a pod. They can never span nodes.
 
 Each Pod has IP Address in a Node.
+
     *Pod containers share the same network namespace (share IP/Port)
 
     *Pod containers have the same loopback network interface
@@ -16,6 +17,7 @@ Each Pod has IP Address in a Node.
     *Ports can be reused by containers in seperate pods
 
 Pods can be scaled horizontally by adding Pod replicas.
+
     *Replicas are copies of the Pod, kubernets can load balance between Pods.
 
     *Unhealthy Pod is removed and new healthy pod is added.
@@ -32,4 +34,8 @@ Volumes, memory which are shared across containers.
 
 *List all resources: **kubectl get all**
 
-*Expose a Pod port: By default pods and containers are only accessible with in the cluster by default. To expose use the following command **kubectl port-forward [nameofthepod] [externalport]:[internalport]**
+*Expose a Pod port: By default pods and containers are only accessible with in the cluster by default. To expose use the following command **kubectl port-forward [name of thepod] [external port]:[internal port]**
+
+*Delete a Pod **kubectl delete pod [name of the pod]**. If pods need to be completely deleted the corresponding deployment also has to be deleted.
+
+*Delete a deployment **kubectl delete deployment [name of the deployment]**
