@@ -1,6 +1,6 @@
 # Concepts of Pods
 
-[ref]: images/Pods.JPG "Pod details"
+![PODS](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Pods.JPG)
 
 Basic execution unit of a kubernets application. This is what is created and deployed. Containers are hosted in pod. Applications can be deployed to multiple containers in a pod. They can never span nodes.
 
@@ -28,7 +28,7 @@ Volumes, memory which are shared across containers.
 
 ## Commands
 
-*Command that helps in running an image in pod: **kubectl run myapp-nginx --image=nginx:alpine** - this is deprecated
+*Command that helps in running an image in pod: **kubectl run myapp-nginx --image=[name of docker image]** - this is deprecated
 
 *List all Pods: **kubectl get pods**
 

@@ -17,4 +17,4 @@ Deployments & Replicasets
 
 ## Organization of Cluster
 
-[ref]: images/cluster.PNG "Cluster Structure"
+![Cluster](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Cluster.PNG)
