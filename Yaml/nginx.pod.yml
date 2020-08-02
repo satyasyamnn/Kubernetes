@@ -23,5 +23,13 @@ spec:
         periodSeconds: 5 # Periodic probe checks 
         timeoutSeconds: 2 
         failureThreshold: 1 # Allow 1 failure before failing Pod
-                 
+      readinessProbe: # Define readiness probes
+        httpGet:
+          path: /index.html
+          port: 80
+        initialDelaySeconds: 2 # wait for 2 seconds 
+        periodSeconds: 5 # Check every 5 seconds
+
+
+
             

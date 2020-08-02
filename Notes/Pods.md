@@ -48,8 +48,8 @@ Kubernetes relies of probes to determine health of a POD.
 
 Types of probles
 
-Liveness - used to determine if a pod is healthy and running as expected
-Readiness - used to determine if a pod is ready to receive requests
+Liveness - used to determine if a pod is healthy and running as expected. When should container restart?
+Readiness - used to determine if a pod is ready to receive requests. When should container start receiving requests?
 
 How to check with in a container
 
@@ -63,3 +63,6 @@ Success
 Failure
 Unknown
 
+See the result in a case liveness probe failed
+
+![PODS](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/livenessProbe.JPG)
