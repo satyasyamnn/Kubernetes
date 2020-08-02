@@ -12,6 +12,10 @@ A Deployment is a declarative way to manage pods using a replica set. A deployme
 
   *provides rollback functionality
 
+  *creates unique label that is assigned to the Replicasets and generated pods
+
+  *YAML is very similar to replica sets
+
 ## Replica sets
 
 A Replica set is a declarative way to manage Pods.
@@ -33,3 +37,33 @@ Replica sets acts as a Pod controller
   *No need to create POD directly
 
   *used by deployments
+
+## Deployment Template
+
+![Deployment YAML](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/DeploymentsYaml.JPG)
+
+## Deployment Template Example
+
+![Deployment YAML](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/DeploymentsYamlExample.JPG)
+
+## Commands
+
+Deployment using YAML file **kubectl create -f [name of the deployment file]**
+
+Apply additional changes to Deployment using YAML file **kubectl apply -f [name of the deployment file]**
+
+To get all deployments **kubectl get deployments**
+
+To get information of all labels in deployment **kubectl get deployment --show-labels**
+
+To get deploytment details of a specific label **kubectl get deployment -l app=nginx**
+
+To delete a deployment **kubectl delete deployment [deployment name]**
+
+Scale deployments **kubectl scale deployment [deployment-name] --replicas=[no of replicas]**
+
+Scale deployment referencing YML file **kubectl scale -f [name of the file] --replicas=[no of replicas]**
+
+Ex: spec:
+        replicas: 3
+
