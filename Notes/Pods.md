@@ -41,3 +41,25 @@ Volumes, memory which are shared across containers.
 *Delete a deployment **kubectl delete deployment [name of the deployment]**
 
 *Interaction to container in POD **kubectl exec [name of the pod] -it sh**
+
+## POD Health
+
+Kubernetes relies of probes to determine health of a POD.
+
+Types of probles
+
+Liveness - used to determine if a pod is healthy and running as expected
+Readiness - used to determine if a pod is ready to receive requests
+
+How to check with in a container
+
+Exec Action
+TCP Socket Action
+Http Get Action
+
+Probes can have the following output
+
+Success
+Failure
+Unknown
+

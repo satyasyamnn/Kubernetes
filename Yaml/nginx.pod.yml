@@ -14,6 +14,14 @@ spec:
       resources:
           limits:
             memory: "200Mi"
-            cpu: "20m"
-             
+            cpu: "200m"
+      livenessProbe: # Define live ness probes 
+        httpGet:
+          path: /index.html
+          port: 80
+        initialDelaySeconds: 15 # initial delay wait for 15 seconds
+        periodSeconds: 5 # Periodic probe checks 
+        timeoutSeconds: 2 
+        failureThreshold: 1 # Allow 1 failure before failing Pod
+                 
             
