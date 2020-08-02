@@ -39,3 +39,5 @@ Volumes, memory which are shared across containers.
 *Delete a Pod **kubectl delete pod [name of the pod]**. If pods need to be completely deleted the corresponding deployment also has to be deleted.
 
 *Delete a deployment **kubectl delete deployment [name of the deployment]**
+
+*Interaction to container in POD **kubectl exec [name of the pod] -it sh**
