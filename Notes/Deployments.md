@@ -64,6 +64,15 @@ Scale deployments **kubectl scale deployment [deployment-name] --replicas=[no of
 
 Scale deployment referencing YML file **kubectl scale -f [name of the file] --replicas=[no of replicas]**
 
+Describing deployement **kubectl describe deployment [name of the deployment]**
+
 Ex: spec:
         replicas: 3
 
+## Post deployment
+
+When deployment is done, we can see a deployment object, pods and replica set getting created. Replica set name is tagged with the pod name to differentiate other pods in the node.
+
+Replica sets show the desired and the current state of deployment.
+
+![Deployment YAML](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/DeploymentsOutputs.JPG)
