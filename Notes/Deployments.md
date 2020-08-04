@@ -76,3 +76,23 @@ When deployment is done, we can see a deployment object, pods and replica set ge
 Replica sets show the desired and the current state of deployment.
 
 ![Deployment YAML](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/DeploymentsOutputs.JPG)
+
+## scaling
+
+### To scale
+
+kubectl scale -f .\yaml\nginx.deployment.yml --replicas=4
+
+![Deployment Scaling](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Scale.JPG)
+
+### To delete deployment using file
+
+kubectl delete -f .\yaml\nginx.deployment.yml
+
+All PODS in the replica set will be marked with status Terminating
+
+![Deployment Delete](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Deployment.Delete.JPG)
+
+## Summary of commands
+
+![Deployment Commands](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Deployment.commands.JPG)
