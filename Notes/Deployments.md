@@ -83,7 +83,7 @@ Replica sets show the desired and the current state of deployment.
 
 kubectl scale -f .\yaml\nginx.deployment.yml --replicas=4
 
-![Deployment Scaling](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Scale.JPG)
+![Deployment Scaling](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/scale.JPG)
 
 ### To delete deployment using file
 
