@@ -96,3 +96,32 @@ All PODS in the replica set will be marked with status Terminating
 ## Summary of commands
 
 ![Deployment Commands](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Deployment.commands.JPG)
+
+## Deployment Options
+
+Zero down time (ZDD) deployments allow software updates with out impacting end users
+
+### Options for deployment
+
+- Rolling updates
+- Blue green deployments or AB deployments
+- Canary deployments
+- Rollbacks
+
+### Rolling  update
+
+Rolling out to Production
+
+![Rolling update](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/RollingUpdate.Deployment.Pod.JPG)
+
+Delete Pod
+
+![Rolling update](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/RollingUpdate.Delete.Deployment.Pod.JPG)
+
+Final State
+
+![Final State](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/RollingUpdate.Complete.Deployment.Pod.JPG)
+
+To Update POD, for rolling update which is the default option use the below
+
+Apply additional changes to Deployment using YAML file **kubectl apply -f [name of the deployment file]**
