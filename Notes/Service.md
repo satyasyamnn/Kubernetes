@@ -1,0 +1,51 @@
+# Services core concepts
+
+A service provides a single point of entry for accessing one or more pods.
+
+## Why we need services
+
+- Pods are "mortal" and they live for short time
+
+- You cant rely on a pod IP address staying the same
+
+- Pods can be scaled horizontally so each pod get its own ip
+
+- Pod gets an ip address after it has been scheduled (no way for clients to know schedule ahead of time)
+
+## Role of services
+
+![Services](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Services/RoleOfServices.JPG)
+
+- Services abstract Pod IP Address from consumers
+
+- Labels are used to associated pods with services
+
+- Load balance between Pods
+
+- Nodes kube proxy creates virtual IP for services
+
+- Layer 4 TCP/IP
+
+- Services are not ephemeral
+
+- Create endpoints which is between the service and pods
+
+![Calling Services](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Services/CallingServices.JPG)
+
+## Types of Services
+
+- Cluster IP - Expose the service on a cluster internal IP. Service IP is exposed internally in the cluster and only Pods can talk to the cluster.
+
+![Cluster IP](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Services/ClusterIp.JPG)
+
+- NodePort - Expose the service on each Node's (worker node) IP at static Port. External caller can now reach to the pods
+
+![Node Port](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Services/NodePort.JPG)
+
+- Load Balancer - Provision an external IP to act as a load balancer for the service. This is also useful when combined with cloud providers load balancer. Behing the scenes we have a node port and cluster IP services created. Each node proxies the allocated port
+
+![Load Balancer](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Services/LoadBalancer.JPG)
+
+- ExternalName - Maps a service to DNS name
+
+![External Name](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Services/ExternalName.JPG)
