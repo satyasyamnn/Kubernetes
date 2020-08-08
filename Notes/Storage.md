@@ -28,6 +28,38 @@ A volume mount refences a volume by name and defines a mount path
 
 ### Persistent Volumes
 
-### Persistent Volume Claims
+A persistent volume (PV) is a cluster wide storage provisioned independant of the pod life cycle
+
+Persistent Volume Claim (PVC) is a request for storage unit.
+
+Available to a Pod even if it is rescheduled to a different node
+
+Reply on storage provider such as NFS, cloud storage or other options
+
+Associated with a Pod using a persistent volume claim (PVC)
+
+### PV Workflow
+
+Create network storage resources (NFS, Cloud etc.)
+
+Define a persistent volume (PV) send to kubernetes api
+
+Create persist volume claim (PVC) enable to use PV
+
+kubernetes binds the PVC to PV
+
+Pod volume references to PVC
+
+![Volume Types Examples](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Storage/PVBinding.JPG)
 
 ### Storage classes
+
+A storage class (SC) is a type of storage implementation that can be used to dynamically provision storage.
+
+Used to define different classes of storage
+
+Act as a storage templates
+
+Support dynamic provisioning of persistent volumes
+
+![Volume Types Examples](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Storage/StorageClasses.JPG)
