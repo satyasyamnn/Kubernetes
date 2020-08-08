@@ -49,3 +49,36 @@ A service provides a single point of entry for accessing one or more pods.
 - ExternalName - Maps a service to DNS name
 
 ![External Name](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Services/ExternalName.JPG)
+
+## Port Forwarding
+
+How can we access a Pod from out of kubernetes? it is through port forwarding
+
+Commands
+
+Expose a Pod port: By default pods and containers are only accessible with in the cluster by default. To expose use the following command **kubectl port-forward Pod/[name of thepod] [external port]:[internal port]**
+
+Port forward for a deployment **kubectl port-forward deployment/[name of the deployment] [internal port]**
+
+Port forward for a service **kubectl port-forward Service/[name of the service] [internal port]**
+
+## Define Service
+
+![Define Services](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Services/DefineServices.JPG)
+
+![Service Definition](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Services/ServiceYaml.JPG)
+
+![Service Definition](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Services/ServiceDns.JPG)
+
+When load balance service type is applied, external ip is assigned
+
+![When Load Balancer is defined](https://github.com/satyasyamnn/Kubernetes/blob/master/Images/Services/ApplyLoadBalancer.JPG)
+
+## Commands
+
+To create **kubectl create -f .\nginx.loadbalancer.yml --save-config**
+
+To modify **kubectl apply -f .\nginx.loadbalancer.yml --save-config**
+
+To Delete  **kubectl delete -f .\nginx.loadbalancer.yml --save-config**
+To Delete  **kubectl delete service [name of the service]**
