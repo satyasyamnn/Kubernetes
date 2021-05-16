@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: configmaps
+data:
+  COLLECTION_NAME: messages
+  DB_NAME: testdb
